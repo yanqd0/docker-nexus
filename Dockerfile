@@ -19,7 +19,7 @@ RUN set -x \
         -o /tmp/nexus.tar.gz \
     && apk del curl \
     && tar -xzf /tmp/nexus.tar.gz -C /tmp/ \
-    && mv /tmp/nexus-${NEXUS_VERSION} ${NEXUS_HOME} \
+    && mv -T /tmp/nexus-${NEXUS_VERSION} ${NEXUS_HOME} \
     && sed \
         -e "s|karaf.home=.|karaf.home=${NEXUS_HOME}|g" \
         -e "s|karaf.base=.|karaf.base=${NEXUS_HOME}|g" \
