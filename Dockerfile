@@ -11,12 +11,15 @@ ENV JAVA_MAX_MEM=1200m \
     NEXUS_USER=nexus \
     NEXUS_CONTEXT=''
 
-RUN mkdir -p ${NEXUS_HOME} ${NEXUS_DATA}/etc ${NEXUS_DATA}/log ${NEXUS_DATA}/tmp \
+RUN set -x \
+    && mkdir -p ${NEXUS_HOME} ${NEXUS_DATA}/etc ${NEXUS_DATA}/log ${NEXUS_DATA}/tmp \
     && apk --no-cache add curl \
-    && curl --fail --silent --location --retry 3 \
+    && curl -sSL --retry 3 \
         https://download.sonatype.com/nexus/3/nexus-${NEXUS_VERSION}-unix.tar.gz \
-        | tar -xz -C ${NEXUS_HOME} --strip-components=1 nexus-${NEXUS_VERSION} \
+        -o /tmp/nexus.tar.gz \
     && apk del curl \
+    && tar -xzf /tmp/nexus.tar.gz -C /tmp/ \
+    && mv /tmp/nexus-${NEXUS_VERSION} ${NEXUS_HOME} \
     && sed \
         -e "s|karaf.home=.|karaf.home=${NEXUS_HOME}|g" \
         -e "s|karaf.base=.|karaf.base=${NEXUS_HOME}|g" \
