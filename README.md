@@ -42,7 +42,7 @@ So the image is very small, and the environment is very clean.
 
 [microbadger.svg]:https://images.microbadger.com/badges/image/yanqd0/nexus.svg
 [microbadger]:https://microbadger.com/images/yanqd0/nexus
-[docker-nexus3]:https://hub.docker.com/r/sonatype/docker-nexus3/~/dockerfile/
+[docker-nexus3]:https://hub.docker.com/r/sonatype/docker-nexus3/
 [downloads]:https://www.sonatype.com/download-oss-sonatype
 
 ## License
