@@ -33,14 +33,17 @@ It is welcome to remind me about updates with [issues].
 ## Size
 
 | Status     | Size                                |
-| ------     | ---:                                |
+| ------     | ----                                |
 | Compressed | [![][microbadger.svg]][microbadger] |
 | Extracted  | 198 MB                              |
 
-I use the official [releases] instead of compiling from source, so the image is very small.
+Inspired by [docker-nexus3], artifacts from official [downloads] are installed.
+So the image is very small, and the environment is very clean.
 
 [microbadger.svg]:https://images.microbadger.com/badges/image/yanqd0/nexus.svg
 [microbadger]:https://microbadger.com/images/yanqd0/nexus
+[docker-nexus3]:https://hub.docker.com/r/sonatype/docker-nexus3/~/dockerfile/
+[downloads]:https://www.sonatype.com/download-oss-sonatype
 
 ## License
 
