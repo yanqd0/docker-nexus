@@ -1,7 +1,8 @@
-# docker-nexus
+# docker-nexus (Deprecated)
 
-This is an [Alpine] alternative of [Nexus Repository OSS].
-There is also an [official one][nexus3] available.
+This is an [Alpine] alternative of [Nexus Repository OSS] **for reference only**.
+~~There is also an [official one][nexus3] available.~~
+Use the [official one][nexus3]!
 
 [Alpine]:https://www.alpinelinux.org/
 [Nexus Repository OSS]:https://www.sonatype.com/nexus-repository-oss
@@ -39,6 +40,7 @@ It is welcome to remind me about updates with [issues].
 
 Inspired by [docker-nexus3], artifacts from official [downloads] are installed.
 So the image is very small, and the environment is very clean.
+(But I don't want to maintain it.)
 
 [microbadger.svg]:https://images.microbadger.com/badges/image/yanqd0/nexus.svg
 [microbadger]:https://microbadger.com/images/yanqd0/nexus
